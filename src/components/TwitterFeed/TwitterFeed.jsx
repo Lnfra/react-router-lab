@@ -1,6 +1,9 @@
 import React from "react";
+import queryString from 'query-string';
 
-function TwitterFeed({ data }) {
+function TwitterFeed({ data, location }) {
+  const parsed = queryString.parse(location.search);
+  console.log(parsed)
   return (
     <div>
       <h1>This is your TwitterFeed</h1>
